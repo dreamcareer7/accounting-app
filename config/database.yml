@@ -1,0 +1,22 @@
+# PostgreSQL. Versions 9.3 and up are supported.
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: accounting_app_dev
+  username: myuser
+  password: password
+  host: localhost
+
+test:
+  <<: *default
+  database: accounting_app_test
+
+production:
+  <<: *default
+  database: accounting_app_production
+  username: accounting_app
+  password: <%= ENV["ACCOUNTING_APP_DATABASE_PASSWORD"] %>
