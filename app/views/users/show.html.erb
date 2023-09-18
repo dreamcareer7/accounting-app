@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= link_to "Back to users", users_path %>
+<div><br></div>
+<%= render @user %>
+
+<div>
+  <%= button_to "Edit", edit_user_path(@user), method: :get, form_class: "d-inline", class: "btn btn-link p-0" %> | 
+  <%= button_to "Destroy", @user, method: :delete, form_class: "d-inline", class: "btn btn-link p-0" %>
+</div>

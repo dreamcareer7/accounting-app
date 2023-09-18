@@ -14,6 +14,9 @@ development:
 test:
   <<: *default
   database: accounting_app_test
+  username: myuser
+  password: password
+  host: localhost
 
 production:
   <<: *default
