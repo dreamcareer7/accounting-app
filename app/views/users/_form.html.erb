@@ -13,17 +13,22 @@
 
   <div class="col-md-6">
     <%= form.label :user_name, class: "form-label", style: "display: block" %>
-    <%= form.text_field :user_name, class: "form-control", placeholder: "dreamcareer" %>
-  </div>
-
-  <div class="col-md-6">
-    <%= form.label :password, class: "form-label", style: "display: block" %>
-    <%= form.password_field :password, class: "form-control" %>
+    <%= form.text_field :user_name, required: true, class: "form-control", placeholder: "dreamcareer" %>
   </div>
 
   <div class="col-md-6">
     <%= form.label :email, class: "form-label", style: "display: block" %>
     <%= form.email_field :email, class: "form-control", placeholder: "dreamcareer@gmail.com" %>
+  </div>
+
+  <div class="col-md-6">
+    <%= form.label :password, class: "form-label", style: "display: block" %>
+    <%= form.password_field :password, required: true, class: "form-control" %>
+  </div>
+
+  <div class="col-md-6">
+    <%= form.label :password_confirmation, class: "form-label", style: "display: block" %>
+    <%= form.password_field :password_confirmation, required: true, class: "form-control" %>
   </div>
 
   <div class="col-md-6">
